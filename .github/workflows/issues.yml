@@ -3,7 +3,7 @@
 name: "autoIssues"
 on:
   issues:
-    types: [labeled, unlabeled]
+    types: [labeled, unlabeled, edited]
 
 jobs:
   test:

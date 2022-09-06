@@ -19,6 +19,7 @@ jobs:
           state: "open"
           creator: "kangyana"
           per_page: 100
+          sort: "created"
       - name: add-and-commit
         uses: EndBug/add-and-commit@v4
         with:

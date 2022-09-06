@@ -15,9 +15,9 @@ jobs:
         uses: kangyana/issues-to-json@master
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          labels: "question"
           state: "open"
           creator: "kangyana"
-          per_page: 10
       - name: add-and-commit
         uses: EndBug/add-and-commit@v4
         with:

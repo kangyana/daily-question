@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: Auto issues list in json
-        uses: kangyana/issues-to-json @master
+        uses: kangyana/issues-to-json@master
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           state: "open"

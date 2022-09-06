@@ -15,7 +15,7 @@ jobs:
         uses: kangyana/issues-to-json@master
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          labels: "question"
+          labels: "question,javascript"
           state: "open"
           creator: "kangyana"
       - name: add-and-commit

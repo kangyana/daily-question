@@ -1,4 +1,14 @@
-import { defineUserConfig, defaultTheme } from "vuepress";
+import { defineUserConfig, defaultTheme, SidebarConfigArray } from "vuepress";
+import issues from '../../data/issues.json';
+
+const generateSiebar = () => {
+  const result: SidebarConfigArray = [{ text: "目录", link: "/fe", }];
+  Object.keys(issues).forEach((key) => {
+    const children = issues[key].map((v) => ({ text: v.title, link: "" }));
+    result.push({ text: key, collapsible: true, children, });
+  })
+  return result;
+}
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -19,26 +29,8 @@ export default defineUserConfig({
       },
     ],
     sidebar: {
-      "/fe": [
-        {
-          text: "目录",
-          link: "/fe",
-        },
-        {
-          text: "js",
-          collapsible: true,
-          children: [
-            {
-              text: "js 有几种基本的数据类型",
-              link: "/fe/js/0",
-            },
-            {
-              text: "如何判断 js 数据类型",
-              link: "/fe/js/1",
-            },
-          ],
-        },
-      ],
+      "/fe": generateSiebar(),
     },
   }),
 });
+

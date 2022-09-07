@@ -4,7 +4,7 @@ import issues from '../../data/issues.json';
 const generateSiebar = () => {
   const result: SidebarConfigArray = [{ text: "目录", link: "/fe", }];
   Object.keys(issues).forEach((key) => {
-    const children = issues[key].map((v) => ({ text: v.title, link: "" }));
+    const children = issues[key].map((v) => ({ text: v.title, link: `/fe/${key}/${v.number}` }));
     result.push({ text: key, collapsible: true, children, });
   })
   return result;

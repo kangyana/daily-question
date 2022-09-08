@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: Auto issues list in json
+      - name: auto issues list in json
         uses: kangyana/issues-to-json@master
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -20,6 +20,8 @@ jobs:
           creator: "kangyana"
           per_page: 100
           sort: "created"
+      - name: build docs
+        run: yarn doc
       - name: add-and-commit
         uses: EndBug/add-and-commit@v4
         with:

@@ -22,11 +22,19 @@ const generateIssueMd = () => {
     // 遍历生成问题md
     value.forEach(item => {
       const { number, title, body, html_url } = item;
-      const itemPath = path.join(dirPath, `${number}.md`);
-      const content = `# ${title}\r\n\r\n::: tip Issue\r\n欢迎在 Gtihub Issue 中回答此问题: [Issue ${number}](${html_url})\r\n:::\r\n\r\n::: tip Author\r\n回答者: [${username}](https://github.com/${username})\r\n:::\r\n\r\n${body}`;
+      const index = number + 1;
+      const itemPath = path.join(dirPath, `${index}.md`);
+      const content = `# ${title}\r\n
+::: tip Issue
+欢迎在 Gtihub Issue 中回答此问题: [Issue ${index}](${html_url})
+:::\r\n
+::: tip Author
+回答者: [${username}](https://github.com/${username})
+:::\r\n
+${body}`;
       fs.writeFileSync(itemPath, content);
       // 写进目录
-      indexContent += `- [${title}](${key}/${number}.html)\r\n`
+      indexContent += `- [${title}](${key}/${index}.html)\r\n`
     })
   })
   // 最后生成index.md

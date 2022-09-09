@@ -4,6 +4,8 @@ const issues = require('../data/issues.json')
 
 const dir = path.resolve(__dirname, '../docs')
 
+const username = 'kangyana';
+
 // 根据 Issue 生成 Markdown
 const generateIssueMd = () => {
   const fePath = path.resolve(dir, 'fe'); // fe文件夹
@@ -19,9 +21,9 @@ const generateIssueMd = () => {
     fs.mkdirSync(dirPath)
     // 遍历生成问题md
     value.forEach(item => {
-      const { number, title, body } = item;
+      const { number, title, body, html_url } = item;
       const itemPath = path.join(dirPath, `${number}.md`);
-      const content = `### ${title}\r\n\r\n${body}`;
+      const content = `# ${title}\r\n\r\n::: tip Issue\r\n欢迎在 Gtihub Issue 中回答此问题: [Issue ${number}](${html_url})\r\n:::\r\n\r\n::: tip Author\r\n回答者: [${username}](https://github.com/${username})\r\n:::\r\n\r\n${body}`;
       fs.writeFileSync(itemPath, content);
       // 写进目录
       indexContent += `- [${title}](${key}/${number}.html)\r\n`

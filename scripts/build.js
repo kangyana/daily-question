@@ -20,7 +20,7 @@ const generateIssueMd = () => {
     const dirPath = path.join(fePath, key); // 标签文件夹
     fs.mkdirSync(dirPath);
     // 遍历生成问题md
-    value?.forEach((item) => {
+    value.forEach((item) => {
       const { number, title, body, html_url } = item;
       const index = number + 1;
       const itemPath = path.join(dirPath, `${index}.md`);
@@ -63,4 +63,4 @@ const removeFile = (_path) => {
   }
 };
 
-generateIssueMd();
+// generateIssueMd();

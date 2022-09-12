@@ -26,17 +26,19 @@ const generateIssueMd = () => {
 ${
   body &&
   `::: tip 更多描述
-网站开发中，如何实现图片的懒加载，随着 web 技术的发展，他有没有一些更好的方案
+${body}
 :::\r\n`
 }
 ::: tip Issue
 欢迎在 Gtihub Issue 中回答此问题: [Issue ${index}](${url})
 :::\r\n
-${comments.map(
-  (comment) => `::: tip Author
+${comments
+  .map(
+    (comment) => `::: tip Author
 回答者: [${comment.author.login}](${comment.author.url})
 :::\r\n${comment.body}\r\n`
-)}`;
+  )
+  .join("")}`;
       fs.writeFileSync(itemPath, content);
       // 写进目录
       indexContent += `- [${title}](${key}/${index}.html)\r\n`;

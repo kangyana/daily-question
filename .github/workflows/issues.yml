@@ -20,7 +20,7 @@ jobs:
           creator: "kangyana"
           per_page: 100
           sort: "created"
-          direction: "desc"
+          direction: "asc"
       - name: build docs
         run: yarn doc
       - name: add-and-commit

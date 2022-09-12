@@ -15,12 +15,12 @@ const generateIssueMd = () => {
   const indexPath = path.join(fePath, "index.md"); // index文件夹
   let indexContent = `# 前端常见面试题总结\r\n\r\n`;
   Object.keys(issues).forEach((key) => {
-    const value = issues[key] || [];
+    const value = issues[key];
     // 创建标签文件夹
     const dirPath = path.join(fePath, key); // 标签文件夹
     fs.mkdirSync(dirPath);
     // 遍历生成问题md
-    value.forEach((item) => {
+    value?.forEach((item) => {
       const { number, title, body, html_url } = item;
       const index = number + 1;
       const itemPath = path.join(dirPath, `${index}.md`);

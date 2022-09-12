@@ -1,7 +1,7 @@
 # 【Q001】js 有几种基本的数据类型
 
 ::: tip Issue
-欢迎在 Gtihub Issue 中回答此问题: [Issue 2](https://github.com/kangyana/daily-question/issues/1)
+欢迎在 Gtihub Issue 中回答此问题: [Issue NaN](https://github.com/kangyana/daily-question/issues/1)
 :::
 
 ::: tip Author

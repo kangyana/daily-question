@@ -19,7 +19,7 @@ jobs:
           state: "open"
           creator: "kangyana"
           per_page: 100
-          sort: "created"
+          sort: "created_at"
       - name: build docs
         run: yarn doc
       - name: add-and-commit

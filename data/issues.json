@@ -1,1 +1,47 @@
-{"javascript":[{"number":2,"title":"【Q002】如何判断 js 数据类型","labels":["javascript"],"body":"基础类型和复杂类型","url":"https://github.com/kangyana/daily-question/issues/2","comments":[{"author":{"login":"kangyana","url":"https://github.com/kangyana"},"body":"### typeof用于判断基本数据类型，无法区分object、array、null\r\n```javascript\r\n    typeof 1 // 'number'\r\n    typeof \"1\" // 'string'\r\n    typeof undefined // 'undefined'\r\n    \r\n    typeof null // 'object'\r\n    typeof [] // 'object'\r\n    typeof {} // 'object'\r\n    typeof function() {} // 'function'\r\n```\r\n\r\n### 区分object和array，可以使用`Array.isArray()`\r\n```javascript\r\n    Array.isArray([1, 2, 3]); // true\r\n    Array.isArray({foo: 123}); // false\r\n    Array.isArray(\"foobar\"); // false\r\n    Array.isArray(undefined); // false\r\n```"},{"author":{"login":"kangyana","url":"https://github.com/kangyana"},"body":"一条友善的评论"}]},{"number":1,"title":"【Q001】js 有几种基本的数据类型","labels":["javascript"],"body":null,"url":"https://github.com/kangyana/daily-question/issues/1","comments":[{"author":{"login":"kangyana","url":"https://github.com/kangyana"},"body":"### 6种基本数据类型。\r\n\r\n- String 字符串\r\n- Number 数字\r\n- Boolean 布尔值\r\n- Null 空\r\n- Undefined 未定义\r\n- Symbol （es6新增）\r\n\r\n### 5种引用数据\r\n\r\n- Object 对象\r\n- Array 数组\r\n- Function 函数\r\n- RegExp 正则\r\n- Date 日期"}]}]}
+{
+  "javascript": [
+    {
+      "number": 2,
+      "title": "【Q002】如何判断 js 数据类型",
+      "labels": [
+        "javascript"
+      ],
+      "body": "基础类型和复杂类型",
+      "url": "https://github.com/kangyana/daily-question/issues/2",
+      "comments": [
+        {
+          "author": {
+            "login": "kangyana",
+            "url": "https://github.com/kangyana"
+          },
+          "body": "### typeof用于判断基本数据类型，无法区分object、array、null\r\n```javascript\r\n    typeof 1 // 'number'\r\n    typeof \"1\" // 'string'\r\n    typeof undefined // 'undefined'\r\n    \r\n    typeof null // 'object'\r\n    typeof [] // 'object'\r\n    typeof {} // 'object'\r\n    typeof function() {} // 'function'\r\n```\r\n\r\n### 区分object和array，可以使用`Array.isArray()`\r\n```javascript\r\n    Array.isArray([1, 2, 3]); // true\r\n    Array.isArray({foo: 123}); // false\r\n    Array.isArray(\"foobar\"); // false\r\n    Array.isArray(undefined); // false\r\n```"
+        },
+        {
+          "author": {
+            "login": "kangyana",
+            "url": "https://github.com/kangyana"
+          },
+          "body": "一条友善的评论"
+        }
+      ]
+    },
+    {
+      "number": 1,
+      "title": "【Q001】js 有几种基本的数据类型",
+      "labels": [
+        "javascript"
+      ],
+      "body": null,
+      "url": "https://github.com/kangyana/daily-question/issues/1",
+      "comments": [
+        {
+          "author": {
+            "login": "kangyana",
+            "url": "https://github.com/kangyana"
+          },
+          "body": "### 6种基本数据类型。\r\n\r\n- String 字符串\r\n- Number 数字\r\n- Boolean 布尔值\r\n- Null 空\r\n- Undefined 未定义\r\n- Symbol （es6新增）\r\n\r\n### 5种引用数据\r\n\r\n- Object 对象\r\n- Array 数组\r\n- Function 函数\r\n- RegExp 正则\r\n- Date 日期"
+        }
+      ]
+    }
+  ]
+}

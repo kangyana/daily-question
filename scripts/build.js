@@ -20,17 +20,18 @@ const generateIssueMd = () => {
     // 遍历生成问题md
     value.forEach((item) => {
       const { number, title, body, url, comments } = item;
-      const index = number + 1;
-      const itemPath = path.join(dirPath, `${index}.md`);
+      // const index = number + 1;
+      const itemPath = path.join(dirPath, `${number}.md`);
       const content = `# ${title}\r\n
 ${
-  body &&
-  `::: tip 更多描述
+  body
+    ? `::: tip 更多描述
 ${body}
 :::\r\n`
+    : ""
 }
 ::: tip Issue
-欢迎在 Gtihub Issue 中回答此问题: [Issue ${index}](${url})
+欢迎在 Gtihub Issue 中回答此问题: [Issue ${number}](${url})
 :::\r\n
 ${comments
   .map(
@@ -41,7 +42,7 @@ ${comments
   .join("")}`;
       fs.writeFileSync(itemPath, content);
       // 写进目录
-      indexContent += `- [${title}](${key}/${index}.html)\r\n`;
+      indexContent += `- [${title}](${key}/${number}.html)\r\n`;
     });
   });
   // 最后生成index.md

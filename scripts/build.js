@@ -4,8 +4,6 @@ const issues = require("../data/issues.json");
 
 const dir = path.resolve(__dirname, "../docs");
 
-const username = "kangyana";
-
 // 根据 Issue 生成 Markdown
 const generateIssueMd = () => {
   const fePath = path.resolve(dir, "fe"); // fe文件夹
@@ -21,17 +19,24 @@ const generateIssueMd = () => {
     fs.mkdirSync(dirPath);
     // 遍历生成问题md
     value.forEach((item) => {
-      const { number, title, body, html_url } = item;
+      const { number, title, body, url, comments } = item;
       const index = number + 1;
       const itemPath = path.join(dirPath, `${index}.md`);
       const content = `# ${title}\r\n
+${
+  body &&
+  `::: tip 更多描述
+网站开发中，如何实现图片的懒加载，随着 web 技术的发展，他有没有一些更好的方案
+:::\r\n`
+}
 ::: tip Issue
-欢迎在 Gtihub Issue 中回答此问题: [Issue ${index}](${html_url})
+欢迎在 Gtihub Issue 中回答此问题: [Issue ${index}](${url})
 :::\r\n
-::: tip Author
-回答者: [${username}](https://github.com/${username})
-:::\r\n
-${body}`;
+${comments.map(
+  (comment) => `::: tip Author
+回答者: [${comment.author.login}](${comment.author.url})
+:::\r\n${comment.body}\r\n`
+)}`;
       fs.writeFileSync(itemPath, content);
       // 写进目录
       indexContent += `- [${title}](${key}/${index}.html)\r\n`;
@@ -63,4 +68,4 @@ const removeFile = (_path) => {
   }
 };
 
-// generateIssueMd();
+generateIssueMd();

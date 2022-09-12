@@ -1,14 +1,17 @@
 import { defineUserConfig, defaultTheme, SidebarConfigArray } from "vuepress";
-import issues from '../../data/issues.json';
+import issues from "../../data/issues.json";
 
 const generateSiebar = () => {
-  const result: SidebarConfigArray = [{ text: "目录", link: "/fe", }];
+  const result: SidebarConfigArray = [{ text: "目录", link: "/fe" }];
   Object.keys(issues).forEach((key) => {
-    const children = issues[key].map((v) => ({ text: v.title, link: `/fe/${key}/${v.number}` }));
-    result.push({ text: key, collapsible: true, children, });
-  })
+    const children = issues[key].map((v) => ({
+      text: v.title,
+      link: `/fe/${key}/${v.number}.html`,
+    }));
+    result.push({ text: key, collapsible: true, children });
+  });
   return result;
-}
+};
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -31,6 +34,9 @@ export default defineUserConfig({
     sidebar: {
       "/fe": generateSiebar(),
     },
+    sidebarDepth: 0,
+    contributorsText: "贡献者",
+    lastUpdatedText: "上次更新",
+    editLink: false,
   }),
 });
-

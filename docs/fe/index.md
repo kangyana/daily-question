@@ -18,3 +18,5 @@
 - [【Q016】JS 中变量声明提升](javascript/16.html)
 - [【Q017】JS 模块化](javascript/17.html)
 - [【Q018】IIFE 立即执行函数](javascript/18.html)
+- [【Q019】匿名函数](javascript/19.html)
+- [【Q020】箭头函数](javascript/20.html)

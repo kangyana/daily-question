@@ -20,3 +20,6 @@
 - [【Q018】IIFE 立即执行函数](javascript/18.html)
 - [【Q019】匿名函数](javascript/19.html)
 - [【Q020】箭头函数](javascript/20.html)
+- [【Q021】函数柯里化](javascript/21.html)
+- [【Q022】Promise](javascript/22.html)
+- [【Q023】async/await](javascript/23.html)

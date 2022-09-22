@@ -25,3 +25,4 @@
 - [【Q023】async/await](javascript/23.html)
 - [【Q024】Generator](javascript/24.html)
 - [【Q025】对象遍历 和 数组遍历](javascript/25.html)
+- [【Q026】常见的数组方法](javascript/26.html)

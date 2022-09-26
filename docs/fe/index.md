@@ -26,3 +26,6 @@
 - [【Q024】Generator](javascript/24.html)
 - [【Q025】对象遍历 和 数组遍历](javascript/25.html)
 - [【Q026】常见的数组方法](javascript/26.html)
+- [【Q027】Ajax 工作原理](javascript/27.html)
+- [【Q028】fetch](javascript/28.html)
+- [【Q029】同源策略（same-origin policy）](javascript/29.html)

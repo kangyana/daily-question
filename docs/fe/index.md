@@ -30,3 +30,5 @@
 - [【Q028】fetch](javascript/28.html)
 - [【Q029】同源策略（same-origin policy）](javascript/29.html)
 - [【Q030】JS strict模式](javascript/30.html)
+- [【Q031】cookie](javascript/31.html)
+- [【Q032】sessionStorage、localStorage](javascript/32.html)

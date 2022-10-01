@@ -32,3 +32,5 @@
 - [【Q030】JS strict模式](javascript/30.html)
 - [【Q031】cookie](javascript/31.html)
 - [【Q032】sessionStorage、localStorage](javascript/32.html)
+- [【Q034】web worker](javascript/34.html)
+- [【Q035】请解释什么是单页面应用](javascript/35.html)

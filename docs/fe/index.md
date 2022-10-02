@@ -34,3 +34,7 @@
 - [【Q032】sessionStorage、localStorage](javascript/32.html)
 - [【Q034】web worker](javascript/34.html)
 - [【Q035】请解释什么是单页面应用](javascript/35.html)
+- [【Q036】可变对象和不可变对象](javascript/36.html)
+- [【Q037】什么是事件循环（event loop）](javascript/37.html)
+- [【Q038】创建对象有几种方法](javascript/38.html)
+- [【Q039】深拷贝和浅拷贝](javascript/39.html)

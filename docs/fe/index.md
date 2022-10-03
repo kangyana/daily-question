@@ -38,3 +38,8 @@
 - [【Q037】什么是事件循环（event loop）](javascript/37.html)
 - [【Q038】创建对象有几种方法](javascript/38.html)
 - [【Q039】深拷贝和浅拷贝](javascript/39.html)
+- [【Q041】requestAnimationFrame](javascript/41.html)
+- [【Q042】requestIdleCallback](javascript/42.html)
+- [【Q043】webassembly](javascript/43.html)
+- [【Q044】垃圾回收](javascript/44.html)
+- [【Q045】proxy](javascript/45.html)

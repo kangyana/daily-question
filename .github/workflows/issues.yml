@@ -15,7 +15,7 @@ jobs:
         uses: kangyana/issues-to-json@master
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          labels: "javascript,react,webpack"
+          labels: "react"
           state: "open"
           creator: "kangyana"
           per_page: 100

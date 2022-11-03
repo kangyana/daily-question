@@ -82,7 +82,7 @@
 - [【Q080】SSR](react/80.html)
 - [【Q081】为什么需要用 redux](react/81.html)
 - [【Q082】react-redux 是干什么的](react/82.html)
-- [【Q083】react-redux content 实现原理](react/83.html)
+- [【Q083】react-redux connect 实现原理](react/83.html)
 - [【Q084】redux 工作流程及原理](react/84.html)
 - [【Q085】有没有用过其它状态管理器？以及原理](react/85.html)
 - [【Q086】react-router 路由实现原理](react/86.html)

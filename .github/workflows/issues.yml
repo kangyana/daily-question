@@ -18,7 +18,7 @@ jobs:
           labels: ""
           state: "open"
           creator: "kangyana"
-          per_page: 100
+          per_page: 500
           sort: "created"
           direction: "asc"
       - name: build docs

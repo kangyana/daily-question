@@ -30,6 +30,18 @@ export default defineUserConfig({
         text: "前端基础",
         link: "/fe",
       },
+      {
+        text: "编辑器",
+        link: "/editor",
+      },
+      {
+        text: "3d",
+        link: "/3d",
+      },
+      {
+        text: "音媒体",
+        link: "/media",
+      },
     ],
     sidebar: {
       "/fe": generateSiebar(),
